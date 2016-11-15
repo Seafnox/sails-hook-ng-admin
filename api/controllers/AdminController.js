@@ -1,14 +1,15 @@
 /**
  * AdminController
  *
- * @description :: Server-side logic for managing Admins
+ * @description :: Server-side logic for admin pannel
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
+var _ = require('lodash');
+var jade = require('jade');
+var path = require('path');
 
 module.exports = {
   index: function (req, res) {
-    sails.log("++++++++++++++LIST+++++++++++++++");
     var config = sails.config.admin;
 
     var models = {};
@@ -39,9 +40,14 @@ module.exports = {
       models[model.name] = model;
 
     }
-    return res.view({
+
+    //compile jade template into html string
+    var jadeFn = jade.compileFile(path.join(__dirname, '../views/admin/index.jade'));
+    var html = jadeFn({
+      title: config.title,
       models: models
     });
+    return res.send(html);
   },
   create: function(req,res) {
     sails.log("++++++++++++++CREATE+++++++++++++++");

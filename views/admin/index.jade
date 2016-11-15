@@ -2,14 +2,11 @@ doctype html
 html
   head
     block title
-      if locals.title
-        title= title
-      else
-        title Eva admin
+      title= title
 
     // Viewport mobile tag for sensible mobile support
     meta(charset="utf-8")
-    meta(name="author" content="D.R.U.G.")
+    meta(name="author" content="Seafnox")
     meta(name="keywords" content="")
     meta(name="description" content="")
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
@@ -21,5 +18,5 @@ html
       | var models =
       != JSON.stringify(models, 0, 2)
     script(src="/admin/scripts/main.js" type="text/javascript")
-  body(ng-app="myApp")
+  body(ng-app="ngAdmin")
     div(ui-view)

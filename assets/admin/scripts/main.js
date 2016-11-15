@@ -1,10 +1,10 @@
-// declare a new module called 'myApp', and make it require the `ng-admin` module as a dependency
-var myApp = angular.module('myApp', ['ng-admin']);
+// declare a new module called 'ngAdmin', and make it require the `ng-admin` module as a dependency
+var ngAdmin = angular.module('ngAdmin', ['ng-admin']);
 var ngModels = {};
 // declare a function to run when the module bootstraps (during the 'config' phase)
-myApp.config(['NgAdminConfigurationProvider', function (nga) {
+ngAdmin.config(['NgAdminConfigurationProvider', function (nga) {
   // create an admin application
-  var admin = nga.application('My First Admin').baseApiUrl(
+  var admin = nga.application('NG Admin').baseApiUrl(
     window.location.protocol+"//"+window.location.host+window.location.pathname+"/"
   );
 
@@ -38,7 +38,7 @@ myApp.config(['NgAdminConfigurationProvider', function (nga) {
   nga.configure(admin);
 }]);
 
-myApp.config(['RestangularProvider', function(RestangularProvider) {
+ngAdmin.config(['RestangularProvider', function(RestangularProvider) {
   RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
     var model = models[what];
     if (operation == 'getList') {

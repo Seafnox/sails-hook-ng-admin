@@ -1,5 +1,5 @@
 module.exports.admin = {
-  label: "AdminPanel",
+  title: "AdminPanel",
   allowSpesialFieldsOnEdit: false, // not implemented yet
   dashboard: [
     'location',

@@ -1,38 +1,40 @@
 {
-  "name": "sails-hook-cms",
-  "version": "0.0.11",
-  "description": "A simple sails admin panel",
+  "name": "sails-hook-ng-admin",
+  "version": "0.0.1",
+  "description": "A simple sails admin panel without difficults",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec"
   },
-  "author": "Juan P Solano <juanpa_solano@hotmail.com> (http://juanpasolano.com)",
+  "author": "Kirill N Warp <kirill9990@gmail.com>",
   "license": "MIT",
   "sails": {
     "isHook": true
   },
   "dependencies": {
     "jade": "^1.11.0",
-    "jade-async": "^1.1.7",
     "lodash": "^3.10.1",
-    "moment": "^2.10.6",
-    "q": "^1.4.1"
   },
   "devDependencies": {
-    "sails": "^0.11.2"
+    "sails": "^0.11.2",
+    "ng-admin": "^1.0.0-beta3"
   },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanpasolano/sails-hook-cms.git"
+    "url": "git://github.com/seafnox/sails-hook-ng-admin.git"
   },
   "keywords": [
-    "sails"
+    "sails",
+    "ng-admin",
+    "admin pannel",
+    "admin",
+    "cms"
   ],
   "bugs": {
-    "url": "https://github.com/juanpasolano/sails-hook-cms/issues"
+    "url": "https://github.com/seafnox/sails-hook-ng-admin/issues"
   },
-  "homepage": "https://github.com/juanpasolano/sails-hook-cms#readme"
+  "homepage": "https://github.com/seafnox/sails-hook-ng-admin#readme"
 }
